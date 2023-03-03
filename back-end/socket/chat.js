@@ -24,6 +24,8 @@ module.exports = function (io) {
       }
     });
 
+    io.emit('connectedUsers')
+
     socket.on('message', (data) => {
       const newMessage = new sMessage({ ...data });
 
@@ -40,8 +42,13 @@ module.exports = function (io) {
               if (err) {
                 console.log(err);
               } else {
+                if(item.addressee == "all"){
+                  io.emit('message', item);
+                }
+                else{
+                  io.emit(item.addressee, item);
+                }
                 io.emit('users', results);
-                io.emit('message', item);
                 io.emit('messageCount', count);
               }
             });
@@ -49,6 +56,10 @@ module.exports = function (io) {
         })
       })
     })
+
+    socket.on('connectingUser', (data) => {
+      io.emit('connectingUser', data);
+    });
 
     // Listener sur la déconnexion
     socket.on('disconnect', () => {

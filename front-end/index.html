@@ -37,15 +37,16 @@
 		</div>
 		<div class="window-area">
 			<div class="conversation-list">
-				<ul class="">
-					<li class="item"><a href="#"><i class="fa fa-list-alt"></i><span>Dashboard</span></a></li>
-					<li class="item active">
-						<a href="#">
-							<i class="fa fa-user"></i>
-							<span>Team chat</span>
-							<i class="fa fa-times"></i>
-						</a>
-					</li>
+				<ul class="" id="conversation-list">
+					<ul class="" id="conversation-list">
+						<li class="item active">
+							<a href="#">
+								<i class="fa fa-user"></i>
+								<span>Team chat</span>
+								<i class="fa fa-times"></i>
+							</a>
+						</li>
+					</ul>
 				</ul>
 				<div id="username-div">
 					<input type="text" id="username-input" placeholder="Pseudonyme" />
@@ -65,16 +66,20 @@
 				</div>
 			</div>
 			<div class="chat-area">
-				<div class="title"><b>Conversation title</b> - <b id="message-count"></b><i class="fa fa-search"></i></div>
-				<div class="chat-list">
-					<ul id="message-list">
-						
-					</ul>
-				</div>
+					<div class="title"><b>Conversation title</b> - <b id="message-count"></b><i class="fa fa-search"></i>
+					</div>
+					<div class="chat-list">
+						<ul id="message-list">
+	
+						</ul>
+					</div>
 				<div class="input-area">
 					<div class="input-wrapper">
 						<input type="text" id="message-input" placeholder="Message here">
 					</div>
+					<!-- <select id="addressees">
+						<option value="all">Tout Le Mone</option>
+					</select> -->
 					<input type="button" value="Submit" id="send-btn">
 				</div>
 			</div>
