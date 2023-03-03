@@ -2,6 +2,7 @@
   HTML implementation of a Hip Chat redesign based on Jan Dvořák Dribbble shot.
   https://dribbble.com/shots/1529065-HipChat-Redesign
 */
+
 html,
 body,
 div,
@@ -137,12 +138,12 @@ b {
 }
 .window-wrapper {
   background: #fff;
-  width: 780px;
+  width: 1300px;
   margin: 30px auto;
   border-radius: 6px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  min-height: 530px;
+  min-height: 600px;
   position: relative;
 }
 .window-title {
@@ -333,6 +334,7 @@ b {
   border-radius: 5px;
   overflow: hidden;
   float: left;
+  width: 90%;
 }
 .input-area .input-wrapper input {
   height: 30px;
@@ -485,4 +487,10 @@ ul.tabs-container {
 }
 .jspVerticalBar {
   width: 7px;
+}
+#username-btn{
+  width: 100%;
+}
+#username-input{
+  width: 96%;
 }
